@@ -1,0 +1,38 @@
+﻿@model Homework7.Models.Order
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm())
+{ 
+<p>
+    @Html.LabelFor(x => x.Name)
+    @Html.EditorFor(x => x.Name)
+    @Html.ValidationMessageFor(x => x.Name)
+</p>
+<p>
+    @Html.LabelFor(x => x.Address)
+    @Html.EditorFor(x => x.Address)
+    @Html.ValidationMessageFor(x => x.Address)
+</p>
+<p>
+    @Html.LabelFor(x => x.Email)
+    @Html.EditorFor(x => x.Email)
+    @Html.ValidationMessageFor(x => x.Email)
+</p>
+<p>
+    @Html.LabelFor(x => x.Data)
+    @Html.EditorFor(x => x.Data)
+    @Html.ValidationMessageFor(x => x.Data)
+</p>
+<p>
+    @Html.LabelFor(x => x.TermsAccepted)
+    @Html.EditorFor(x => x.TermsAccepted)
+    @Html.ValidationMessageFor(x => x.TermsAccepted)
+</p> 
+
+<input type="submit" value="Submit" />
+}

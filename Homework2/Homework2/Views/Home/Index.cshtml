@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Add", "Add", "Calc");
+<br />
+<hr />
+@Html.ActionLink("Sub", "Sub", "Calc", 12, 3);
+<br />
+<hr />
+@Html.RouteLink("Mul", new { controller = "Calc", action = "Mul" });
+<br />
+<hr />
+@Html.ActionLink("Div", "Div", "Calc", "15", "5");

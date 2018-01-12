@@ -1,0 +1,56 @@
+﻿@model Homework4.Models.RegisterModel
+@{
+    ViewBag.Title = "SingUp";
+}
+
+<h2>SingUp</h2>
+
+
+<link href='~/Content/login.css' rel='stylesheet' type='text/css'>
+
+
+@using (Html.BeginForm("index", "Home"))
+{
+<div class="box">
+    <h1>Dashboard</h1>
+
+    <br />
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email, new { @class = "email", @onFocus = "field_focus(this, 'email');", @onblur = "field_blur(this, 'email');" })
+    <br />
+    @Html.LabelFor(x => x.UserName)
+    @Html.TextBoxFor(x => x.UserName, new { @class = "email", @onFocus = "field_focus(this, 'email');" })
+    <br />
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password, new { @class = "email", @onFocus = "field_focus(this, 'email');", @onblur = "field_blur(this, 'email');", @type = "password" })
+    <br />
+    @Html.LabelFor(x => x.ConfirmPassword)
+    @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "email", @onFocus = "field_focus(this, 'email');", @onblur = "field_blur(this, 'email');", @type = "password" })
+
+    @*<a href="#"><div class="btn">Sign In</div></a>*@
+    @* @Html.ActionLink("SingIn", "Index"); *@
+    <input type="submit" name="operation" value="Sing Up" class="btn" />  <!-- End Btn -->
+    <a href="/Home/Index"><div id="btn2">Sign In</div></a> <!-- End Btn2 -->
+    <p style="color:#000000;">Forgot your password? <u style="color:#000000;">Click Here!</u></p>
+    @if (ViewBag.access != null && ViewBag.access == true)
+    {
+        <h1>you are with us now</h1>
+    }
+    <h1>Dashboard</h1>
+
+</div> <!-- End Box -->
+
+}
+<div class="box1">
+    <h2>@Html.ActionLink("Home", "index")</h2>
+    <br />
+    <h2>@Html.ActionLink("News", "index")</h2>
+    <br />
+    <h2>@Html.ActionLink("About us", "index")</h2>
+    <br />
+</div>
+
+
+
+<script src="~/Scripts/login.js" type="text/javascript"></script>
+

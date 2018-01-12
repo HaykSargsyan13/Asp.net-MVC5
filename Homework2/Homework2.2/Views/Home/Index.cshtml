@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<body>
+
+    <div>
+        @Html.ActionLink("About", "About", "Home")
+        <br />
+        <hr />
+        @Html.ActionLink("Contacts", "Contacts", "Home")
+        <br />
+        <hr />
+        @Html.RouteLink("Admin area", new { controller = "Home", action = "index", area = "Admin" })
+        <br />
+        <hr />
+        @Html.RouteLink("Products area", new { controller = "Products", action = "index", area = "Admin" })
+    </div>
+</body>
+

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>Quick math</legend>
+    X
+    @Html.TextBox("X", "0")
+    <br />
+    Y
+    @Html.TextBox("Y", "0")
+    <br />
+    C
+    @Html.DropDownList("c", new SelectList(new[] { "+", "-", "*", "/" }))
+    <br />
+
+    <input type="submit" value="equals" />
+
+    @if (ViewBag.result != null)
+    {
+        <div> Result = @ViewBag.result</div>
+    }
+</fieldset>
+}
+

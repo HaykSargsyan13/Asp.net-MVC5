@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Homework_5.Models.Product>
+@{
+    ViewBag.Title = "Index";
+
+    var grid = new WebGrid(Model);
+}
+
+<h2>Index</h2>
+
+@grid.GetHtml()
+

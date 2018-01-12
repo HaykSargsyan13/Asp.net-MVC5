@@ -1,0 +1,19 @@
+﻿@model Homework6._1.Models.UserInfo
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm())
+{
+    @:Name:
+    @Html.EditorFor(m => Model.Name)
+<br />
+    @:Id :
+    @Html.EditorFor(m => Model.Id)
+<br />
+    @:Company :
+    @Html.EditorFor(m => Model.Company)
+<br />
+    @:BornDate
+    @Html.EditorFor(m => Model.BornDate)
+<input type="submit" />
+}
